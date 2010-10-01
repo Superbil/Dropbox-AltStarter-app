@@ -1,0 +1,3 @@
+#!/bin/bash
+# Assumes you have Dropbox in /Applications
+HOME=/Users/$USER/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox
