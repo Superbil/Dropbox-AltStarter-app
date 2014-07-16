@@ -1,3 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env zsh
+
+ALT_FOLDER=.dropbox-alt
+ALT_HOME=/Users/$USER/$ALT_FOLDER
+
+# Dropbox default path
+DROPBOX_FOLDER=/Applications/Dropbox.app
+
+# Dropbox at homebrew cask
+if [[ -d "/opt/homebrew-cask/Caskroom/dropbox/latest/Dropbox.app" ]]; then
+    DROPBOX_FOLDER=/opt/homebrew-cask/Caskroom/dropbox/latest/Dropbox.app
+fi
+
 # Assumes you have Dropbox in /Applications
-HOME=/Users/$USER/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox
+HOME=/Users/$USER/.dropbox-alt $DROPBOX_FOLDER/Contents/MacOS/Dropbox
